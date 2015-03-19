@@ -299,4 +299,61 @@ label:not(:first-of-type):not(:nth-of-type(2)) input {
 #i, #v, #n, #p, #m, #o {
   width: 5em;
 }
+.tournament-table {
+  border: medium none;
+  border-spacing: 0 5px;
+  width: 100%;
+}
+
+.tournament-table * {
+  color: #03396e;
+  font-size: 1em;
+}
+
+.tournament-table tr:first-of-type td:not(:first-of-type), .tournament-table tr:first-of-type td div {
+  background-color: #e4edf1;
+}
+
+.tournament-table td:first-of-type {
+  padding: 0;
+  width: 30%;
+  text-align: center;
+}
+
+.tournament-table td:first-of-type div {
+  border: 1px solid #e4edf1;
+  max-height: 100%;
+  min-height: 2.3em;
+  padding-bottom: 0.4em;
+  padding-top: 0.4em;
+  text-align: center;
+  width: 98%;
+}
+
+.tournament-table td:nth-of-type(2) {
+  padding-left: 14em;
+}
+
+.tournament-table td:not(:first-of-type) {
+  border: 1px solid #e4edf1;
+  width: 3em;
+}
+
+.tournament-table td:nth-of-type(2),
+.tournament-table td:nth-of-type(3),
+.tournament-table td:nth-of-type(4),
+.tournament-table td:nth-of-type(5),
+.tournament-table td:nth-of-type(6),
+.tournament-table td:nth-of-type(7) {
+  border-right: 0;
+}
+
+.tournament-table td:nth-of-type(3),
+.tournament-table td:nth-of-type(4),
+.tournament-table td:nth-of-type(5),
+.tournament-table td:nth-of-type(6),
+.tournament-table td:nth-of-type(7),
+.tournament-table td:nth-of-type(8) {
+  border-left: 0;
+}
 </style>
