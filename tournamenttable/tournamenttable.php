@@ -22,17 +22,25 @@ function tournamenttableoptions(){
 
 function add_tournament_table($atts){
   extract(shortcode_atts(array(
-    tour => ""
+    tour => ""/*,
+    tableno => ""*/
   ), $atts));
   if(is_single()){
-    require "functions.php";
+    require_once "functions.php";
     $tt = new TT($db);
+
     $tours = $tt->getTournaments();
 
     //$card = '<h4>Турнирная таблица</h4>';
     $card = "<table class='tournament-table main-color-font'>";
     $card .= "<tr><td><div>Название</div><td>И<td>В<td>Н<td>П<td>М<td>О<!--td>%-->";
-    foreach ($tt->getTeamsByTournament($tour) as $key => $value) {
+    /*if (!empty($tableno)) {
+      $t = $tt->getTeamsByTournament($tour, $tableno);
+    } else {
+    }*/
+      $t = $tt->getTeamsByTournament($tour);
+
+    foreach ($t as $key => $value) {
       $card .= "<tr><td><div><a href='";
       $card .= $value["teamlink"];
       $card .= "'>";
@@ -54,6 +62,7 @@ function add_tournament_table($atts){
     }
     $card .= "</table>";
   }
+  //$tt = NULL;
   return $card;
 }
 add_shortcode("tour", "add_tournament_table");
