@@ -2,7 +2,7 @@
  //error_reporting(E_ALL);
  //ini_set('display_errors', 1);
 
-$db = new PDO("mysql:host=mysqlserver;dbname=litinsky_sport", "litinsky_sport", "67Vcs6Dh3f");
+$db = new PDO("mysql:host=mysqlserver;dbname=$dbname", $dbuser, $dbpass);
 
 class TT {
 public $db;
