@@ -307,10 +307,10 @@ label:not(:first-of-type):not(:nth-of-type(2)) input {
 
 .tour-table-wrap {
   height: 4em;
+  margin-left: 1em;
   overflow: hidden;
-  transition: ease 1s;
+  transition: all 1s ease 0s;
 }
-
 .show {/* стиль всегда внизу */
   height: initial;
 }
